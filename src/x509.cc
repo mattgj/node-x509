@@ -245,7 +245,7 @@ Handle<Value> try_parse(const std::string& dataString) {
     if (lastchar > 1 && (bptr->data[lastchar-1] == '\n' || bptr->data[lastchar-1] == '\r')) {
       bptr->data[lastchar-1] = (char) 0;
     }
-    if (lastchar > 0 && (bptr->data[lastchar] == '\n' || bptr->data[lastchar] == '\r')) {
+    if (lastchar > 0) {
       bptr->data[lastchar] = (char) 0;
     }
     BIO_free(ext_bio);
