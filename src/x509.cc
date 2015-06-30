@@ -241,7 +241,7 @@ Handle<Value> try_parse(const std::string& dataString) {
     BIO_set_close(ext_bio, BIO_NOCLOSE);
 
     // remove newlines
-    int lastchar = bptr->length;
+    size_t lastchar = bptr->length;
     if (lastchar > 1 && (bptr->data[lastchar-1] == '\n' || bptr->data[lastchar-1] == '\r')) {
       bptr->data[lastchar-1] = (char) 0;
     }
